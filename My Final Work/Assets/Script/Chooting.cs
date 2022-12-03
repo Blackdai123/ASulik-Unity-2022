@@ -15,12 +15,14 @@ public class Chooting : MonoBehaviour
     Vector2 endPos;
     Vector2 startPos;
     float progress;
+    SpriteRenderer weaponSprite;
 
     void Start()
     {
         weapon.SetActive(false);
 
         timer = timeToShot;
+        weaponSprite = weapon.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -54,7 +56,18 @@ public class Chooting : MonoBehaviour
 
     Vector2 EndPosWeaponEnder()
     {
-        endPos = new Vector2(player.transform.position.x + shotRange, player.transform.position.y);
+
+        if (MySingleton.Instance.GetSpritePlayer().flipX)
+        {
+            endPos = new Vector2(player.transform.position.x - shotRange, player.transform.position.y);
+            weaponSprite.flipX = true;
+        }
+        else
+        {
+            endPos = new Vector2(player.transform.position.x + shotRange, player.transform.position.y);
+            weaponSprite.flipX = false;
+        }
+
         return endPos;
     }
 

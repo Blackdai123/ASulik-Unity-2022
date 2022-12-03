@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class MovingHero : MonoBehaviour
 {
+    [SerializeField] float speedMoving;
+
     Vector2 track;
+    float horizontalDirection;
 
     void Update()
     {
-        track = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        horizontalDirection = Input.GetAxis("Horizontal");
+
+        if (horizontalDirection > 0)
+        {
+            MySingleton.Instance.GetSpritePlayer().flipX = false;
+        }
+        if(horizontalDirection < 0)
+        {
+            MySingleton.Instance.GetSpritePlayer().flipX = true;
+        }
+        else
+        {
+            MySingleton.Instance.GetSpritePlayer().flipX = MySingleton.Instance.GetSpritePlayer().flipX;
+        }
+
+        track = new Vector2(horizontalDirection, Input.GetAxis("Vertical")) * speedMoving;
         Move(track);
     }
 
