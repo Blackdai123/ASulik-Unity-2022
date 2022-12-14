@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6063690972211941478}
   - component: {fileID: 6063690972211941472}
   - component: {fileID: 6063690972211941473}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mob 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde9e6c288bb0ce4da32eb5555a1b9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5519878309799383368, guid: b68fea6462a236c48bd31d8ba89af011, type: 3}
   health: 100
+  speed: 1
 --- !u!60 &6063690972211941472
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -154,4 +154,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
