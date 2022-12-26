@@ -9,6 +9,10 @@ TagManager:
   - BotleBuff
   - WeaponBuff
   - Lvltrigger
+  - Undefined
+  - HatBuff
+  - Axe
+  - Fish
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - Player
   - Enemy
   - Buff
-  - 
+  - Axe
   - 
   - 
   - 

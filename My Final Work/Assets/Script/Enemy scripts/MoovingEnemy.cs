@@ -22,7 +22,12 @@ public class MoovingEnemy : MonoBehaviour
 
         if (health <= 0)
         {
-            if (BuffManager.Instance.readiness)
+            if (BuffManager.Instance.readinessBotleBuff)
+            {
+                BuffManager.Instance.InstanceBotleBuff(transform);
+            }
+
+            if (BuffManager.Instance.readinessBuff)
             {
                 BuffManager.Instance.InstanceBuff(transform);
             }
@@ -51,6 +56,13 @@ public class MoovingEnemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerWeapon"))
+        {
+            health -= 50;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Axe"))
         {
             health -= 50;
         }
