@@ -12,7 +12,7 @@ public class MovingHero : MonoBehaviour
     Vector2 track;
     float horizontalDirection;
     Animator animator;
-    Vector2 s = new Vector2(0,0);
+    Vector2 nullVector = new Vector2(0,0);
     Collider2D playerCollider;
 
     bool buffApplied;
@@ -76,17 +76,17 @@ public class MovingHero : MonoBehaviour
 
         Move(track);
 
-        if (track.x > s.x || track.y > s.y)
+        if (track.x > nullVector.x || track.y > nullVector.y)
         {
             CharacterAnimator.SetTrigger("Run");
         }
 
-        if (track.x == s.x || track.y == s.y)
+        if (track.x == nullVector.x || track.y == nullVector.y)
         {
             CharacterAnimator.SetTrigger("Idle");
         }
 
-        if (track.x < s.x || track.y < s.y)
+        if (track.x < nullVector.x || track.y < nullVector.y)
         {
             CharacterAnimator.SetTrigger("Run");
         }

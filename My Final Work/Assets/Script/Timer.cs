@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public Text timerText;
+    public TMPro.TMP_Text timerText;
+
     float timerTime;
+    float previousValue;
 
     void Start()
     {
+        if (PlayerPrefs.HasKey("MaxTime"))
+        {
+            previousValue = PlayerPrefs.GetFloat("MaxTime");
+        }
+        
         timerText.text = timerTime.ToString("F2");       
     }
 
@@ -18,5 +25,10 @@ public class Timer : MonoBehaviour
         timerTime += Time.deltaTime;
 
         timerText.text = timerTime.ToString("F2");
+
+        if (previousValue < timerTime)
+        {
+            PlayerPrefs.SetFloat("MaxTime", timerTime);
+        }
     }
 }

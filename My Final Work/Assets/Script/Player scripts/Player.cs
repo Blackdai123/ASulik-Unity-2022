@@ -24,12 +24,14 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("BotleBuff"))
         {
-            health += BotleHealth.Instance.BotleRestoreHealth();
+            var botleHeal = collision.gameObject.GetComponent<BotleHealth>();
+
+            health += botleHeal.BotleRestoreHealth();
+
             if (health > 100)
             {
                 health = 100f;
             }
         }
-
     }
 }

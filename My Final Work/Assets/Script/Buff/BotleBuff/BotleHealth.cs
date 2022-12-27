@@ -9,6 +9,7 @@ public class BotleHealth : BuffSingleton<BotleHealth>
     public float BotleRestoreHealth()
     {
         return restoreHealth;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5519878309799383375}
   - component: {fileID: 5519878309799383373}
+  - component: {fileID: 6570377735896882694}
   - component: {fileID: 1313086773525814911}
   - component: {fileID: 3635936601421157362}
   - component: {fileID: 5519878309799383374}
@@ -90,6 +91,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6570377735896882694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519878309799383368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4182846e05d2a9479c0048a23af7e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joyStick: {fileID: 0}
+  speedMoving: 0
+  oneStar: {fileID: 0}
+  twoStar: {fileID: 0}
+  threeStar: {fileID: 0}
 --- !u!114 &1313086773525814911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +139,6 @@ MonoBehaviour:
   oneStar: {fileID: 0}
   twoStar: {fileID: 0}
   threeStar: {fileID: 0}
-  appAxeBuff: 0
 --- !u!114 &5519878309799383374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMoving: 0
+  oneStar: {fileID: 0}
+  twoStar: {fileID: 0}
+  threeStar: {fileID: 0}
 --- !u!114 &5519878309799383363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +187,9 @@ MonoBehaviour:
   timeToShot: 10
   shotRange: 5
   speedShoting: 0.01
+  oneStar: {fileID: 0}
+  twoStar: {fileID: 0}
+  threeStar: {fileID: 0}
 --- !u!70 &5519878309799383362
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
