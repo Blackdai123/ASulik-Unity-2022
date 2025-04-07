@@ -1,0 +1,183 @@
+{
+  "include": "collections",
+  "filter": null,
+  "count": {
+    "collections": 2,
+    "collections.tabs": 5,
+    "collections.tab_sections": 4,
+    "collections.fields": 5,
+    "collections.items": 2
+  },
+  "site": {
+    "id": 22385,
+    "organization": 10342,
+    "name": "Test Project",
+    "description": "",
+    "pool": 2
+  },
+  "collections": [
+    {
+      "id": 1363,
+      "client": null,
+      "order": 1,
+      "name": "My Second Collection ",
+      "description": null,
+      "variable": { "enabled": false, "format": "array" },
+      "nest": false,
+      "split": null,
+      "config": null,
+      "storage": { "key": null }
+    },
+    {
+      "id": 1362,
+      "client": null,
+      "order": 1,
+      "name": "My Collection",
+      "description": null,
+      "variable": { "enabled": false, "format": "array" },
+      "nest": false,
+      "split": null,
+      "config": null,
+      "storage": { "key": null }
+    }
+  ],
+  "collections.tabs": [
+    { "id": 1618, "name": "General", "collection": 1362 },
+    { "id": 1619, "name": "First Tab", "collection": 1362 },
+    { "id": 1620, "name": "Second Tab", "collection": 1362 },
+    { "id": 1621, "name": "Third Tab", "collection": 1362 },
+    { "id": 1622, "name": "General", "collection": 1363 }
+  ],
+  "collections.tab_sections": [
+    {
+      "id": 2252,
+      "order": 1743692423,
+      "name": "First Tab Content ",
+      "tab": 1619,
+      "collection": 1362
+    },
+    {
+      "id": 2253,
+      "order": 1743692491,
+      "name": "Second Section",
+      "tab": 1620,
+      "collection": 1362
+    },
+    {
+      "id": 2254,
+      "order": 1743692552,
+      "name": "General Second",
+      "tab": 1622,
+      "collection": 1363
+    },
+    {
+      "id": 2251,
+      "order": 1743692210,
+      "name": "General",
+      "tab": 1618,
+      "collection": 1362
+    }
+  ],
+  "collections.fields": [
+    {
+      "id": 7634,
+      "name": "repeter",
+      "collection": 1362,
+      "type": 10,
+      "section": 2251,
+      "order": 1,
+      "width": 12,
+      "list": false,
+      "settings": {
+        "config": {
+          "input": { "type": "INPUT", "title": "Input" },
+          "second-input": { "type": "INPUT", "title": "Second Input" }
+        }
+      }
+    },
+    {
+      "id": 7635,
+      "name": "general-input",
+      "collection": 1362,
+      "type": 1,
+      "section": 2251,
+      "order": 0,
+      "width": 12,
+      "list": false,
+      "settings": {}
+    },
+    {
+      "id": 7637,
+      "name": "first-tab-input",
+      "collection": 1362,
+      "type": 1,
+      "section": 2252,
+      "order": 1743692470,
+      "width": 12,
+      "list": false,
+      "settings": {}
+    },
+    {
+      "id": 7638,
+      "name": "general-second-input",
+      "collection": 1363,
+      "type": 1,
+      "section": 2254,
+      "order": 1743692564,
+      "width": 12,
+      "list": false,
+      "settings": {}
+    },
+    {
+      "id": 7636,
+      "name": "relation",
+      "collection": 1362,
+      "type": 9,
+      "section": 2252,
+      "order": 1743692447,
+      "width": 12,
+      "list": false,
+      "settings": { "collection": 1363 }
+    }
+  ],
+  "collections.items": [
+    {
+      "id": 13379,
+      "collection": 1363,
+      "parent": null,
+      "client": 9277,
+      "name": { "EN": "Second-col first element" },
+      "slug": { "EN": "second-col-first-element" },
+      "order": 1,
+      "fields": { "EN": { "general-second-input": "1" } },
+      "seo": { "EN": { "title": null, "description": null, "cover": null } },
+      "schedule": { "from": null, "to": null },
+      "published": { "EN": false }
+    },
+    {
+      "id": 13380,
+      "collection": 1362,
+      "parent": null,
+      "client": 9277,
+      "name": { "EN": "My col first item" },
+      "slug": { "EN": "my-col-first-item" },
+      "order": 1,
+      "fields": {
+        "EN": {
+          "repeter": [
+            { "input": "First", "second-input": "First" },
+            { "input": "Sec", "second-input": "Sec" }
+          ],
+          "relation": "{13379}",
+          "general-input": "Test",
+          "first-tab-input": "sec tab input",
+          "relation:Relation": "{13379}"
+        }
+      },
+      "seo": { "EN": { "title": null, "description": null, "cover": null } },
+      "schedule": { "from": null, "to": null },
+      "published": { "EN": false }
+    }
+  ],
+  "id": 454
+}
